@@ -10,5 +10,8 @@ int main() {
     printf("%p\n",&a);
     printf("%d\n",*b);
 
+
+    printf("Size of Pointers is : %zu",sizeof(b));
+
     return 0;
 }

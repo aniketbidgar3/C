@@ -4,12 +4,35 @@ int main()
 {
     FILE *fptr;
 
-    // Create a file on your computer (filename.txt)
-    fptr = fopen("file.doc", "r");
-    //   fprintf(fptr,"My name is Aniket");
-    fprintf(fptr, "\nMy name is Aniket");
+    // Writing Something In File
 
-    // Close the file
+    // fptr = fopen("Information.txt", "a");
+
+    // fprintf(fptr, "Hello My Name is Aniket\n");
+    // fprintf(fptr, "I live in Nashik\n");
+    // fprintf(fptr, "I am Computer Science Engineering Graduate\n");
+    // fprintf(fptr, "Currently Work at Disha Computers\n");
+
+    // fclose(fptr);
+
+    // Best Practice to Open File While Reading
+
+    fptr = fopen("Information.txt", "r");
+
+    if (fptr == NULL)
+    {
+        printf("File Does Not Exists");
+    }
+    else
+    {
+        char sentense[50];
+
+        while (fgets(sentense, 50, fptr))
+        {
+            printf("%s", sentense);
+        }
+    }
+
     fclose(fptr);
 
     return 0;

@@ -29,5 +29,10 @@ int main()
 
     output(d1);
 
+    struct date d2 = {30, 12, 2003};
+    output(d2);
+
+    printf("Size of Datatype date : %zu\n", sizeof(d2));
+
     return 0;
 }
