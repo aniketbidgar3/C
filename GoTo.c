@@ -2,11 +2,13 @@
 
 int main()
 {
-    int n = 26;
+    int n;
+    printf("Enter Number : ");
+    scanf("%d", &n);
 
     if (n % 2 == 0)
-
         goto even;
+
     else
         goto odd;
 
